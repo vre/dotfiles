@@ -1,0 +1,100 @@
+# Brew Bundle Configuration for Mac
+# see https://github.com/Homebrew/homebrew-bundle
+# 
+# Check updates/missing:
+# 	brew bundle check
+# Install updates / missing:
+# 	brew bundle
+# Remove software not anymore in Brewfile:
+# 	brew bundle cleanup
+
+
+### Programming tools
+brew 'python'			# Python 2.x
+brew 'python3'			# Python 3.x
+brew 'go'			# Golang
+tap 'go-delve/delve'
+brew 'delve'			# Debugger for Golang
+brew 'node'			# NodeJS
+brew 'git'			# Git
+tap 'potatolabs/git-redate'
+brew 'git-redate'		# Update commit times
+
+cask 'atom'			# Sublime like editor, free but slower :)
+cask 'meld'			# Three way merges etc.
+cask 'pycharm-ce'		# Python GUI from JetBrains
+cask 'spyder'			# Python GUI
+cask 'sourcetree'		# Git GUI
+cask 'sublime-text'		# Sublime - fast and generic
+cask 'visual-studio-code'	# Visual Studio Code - should be good for golang
+
+### Database tools
+brew 'postgresql'		# PostgreSQL
+brew 'mongodb'			# MongoDB
+brew 'sqlite'			# SQLite
+
+cask 'robomongo'		# MongoDB GUI
+cask 'sqlitestudio'		# SQLite GUI
+cask 'sqlworkbenchj'		# PostgreSQL GUI
+cask 'psequel'			# MySQL GUI
+
+### Various CLI utilities
+brew 'pcre'			# 
+brew 'gnu-sed'			# gsed
+brew 'xz'			# .xz file decompression and compression
+brew 'ipcalc'			# ip network and netmask calculator
+brew 'jq'			# commandline JSON processor
+brew 'pwgen'			# Generate random passwords
+brew 'rename'			# Mass rename files (on zsh see also zmv)
+brew 'rpl'			# Mass replace text in files
+brew 'tcptraceroute'		# TCP based traceroute, when ICMP does not work
+#brew 'libusb'				
+brew 'android-platform-tools'	# Connecting Android with adb and fastboot
+brew 'gnupg2'			# GPG
+brew 'mobile-shell'		# Reconnecting ssh-like remote shell
+brew 'mplayer'			# Play-it-all mediaplayer
+brew 'exiftags'			# Extract and retag fotos
+
+### Various GUI apps
+cask 'backblaze'		# Backups, up to 30 days
+cask 'burn'
+cask 'coconutbattery'		# Battery capacity checker
+cask 'cyberduck'		# FTP/SFTP/SCP/Webdav/S3/Dropbox/GoogleDrive upload&download
+cask 'dropbox'			# Dropbox "cloud drive"
+cask 'firefox'			# Firefox
+cask 'flux'			# Blue light blocker to better sleep
+cask 'gimp'			# Thö free photoshop clone
+cask 'google-chrome'		# Chrome
+cask 'google-drive'		# Google Drive
+cask 'horndis'			# USB tethering driver
+cask 'iterm2'			# Better terminal
+cask 'karabiner'		# Modify key mappings
+cask 'keka'			# For compresing to 7z,zip,tar with file size splitting
+cask 'kindle'			# Amazon ebook reader
+cask 'lastpass'			# Password storage program
+cask 'macpass'			# KeePass compatible password manager (keepassx and keepassxc suck)
+cask 'pilemd'			# Markdown based note taking app - a bit work in progress
+cask 'qr-journal'		# Create and read QR codes
+cask 'reggy'			# Regular Expression tester/viewer
+cask 'resilio-sync'		# Olde BitTorrent Sync renamed
+cask 'skim'			# PDF reader and annotator
+cask 'skype'			# Skype 
+cask 'slack'			# Slack
+cask 'spotify'			# Spotify
+cask 'teamviewer'		# Remote desktop
+cask 'the-unarchiver'		# Simple unachiver for zips etc.
+cask 'thunderbird'		# POP3/IMAP mail client
+cask 'tunnelblick'		# OpenVPN tunnelling
+cask 'virtualbox'		# Virtual machines
+cask 'virtualbox-extension-pack'# .. and extensions: support for usb2&3, rdp, network boot
+cask 'vlc'			# VideoLan Player
+cask 'whatsapp'			# WhatApp desktop app
+
+### Mac App Store apps with mas
+brew 'mas'					# https://github.com/mas-cli/mas
+mas 'Microsoft Remote Desktop', id: 715768417	# Remote desktopping to windows machines
+mas 'Noizio', id: 928871589			# Noise generator - wind, rain, whales..
+mas 'Pushbullet', id: 948415170			# Send and receive push messages over Pushbullet
+mas 'SysInfo', id: 892050289			# Toolbar meters for network, memory and cpu
+mas 'Tomato One', id: 907364780			# Pomodoro clock
+mas 'Xcode', id: 497799835			# Xcode
