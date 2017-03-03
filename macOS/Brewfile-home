@@ -12,9 +12,9 @@
 # - CLI
 brew 'python'			# Python 2.x
 brew 'python3'			# Python 3.x
-brew 'go'			# Golang
-tap 'go-delve/delve'		# .. tap
-brew 'delve'			# Debugger for Golang
+#brew 'go'			# Golang
+#tap 'go-delve/delve'		# .. tap
+#brew 'delve'			# Debugger for Golang
 #brew 'node'			# NodeJS
 brew 'git'			# Git
 tap 'potatolabs/git-redate'	# .. tap

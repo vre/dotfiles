@@ -8,8 +8,8 @@
 # Remove software not anymore in Brewfile:
 # 	brew bundle cleanup
 
-
-### Programming tools
+### Programming
+# - CLI
 brew 'python'			# Python 2.x
 brew 'python3'			# Python 3.x
 brew 'go'			# Golang
@@ -28,11 +28,12 @@ cask 'sourcetree'		# Git GUI
 cask 'sublime-text'		# Sublime - fast and generic
 cask 'visual-studio-code'	# Visual Studio Code - should be good for golang
 
-### Database tools
+### Database
+# - CLI
 brew 'postgresql'		# PostgreSQL
 brew 'mongodb'			# MongoDB
 brew 'sqlite'			# SQLite
-
+# - GUI
 cask 'robomongo'		# MongoDB GUI
 cask 'sqlitestudio'		# SQLite GUI
 cask 'sqlworkbenchj'		# PostgreSQL GUI
@@ -57,7 +58,8 @@ brew 'exiftags'			# Extract and retag fotos
 
 ### Various GUI apps
 cask 'backblaze'		# Backups, up to 30 days
-cask 'burn'
+#cask 'burn'			# DVD/CD burner
+cask 'calibre'			# File manager for ebooks/pdfs/textfiles
 cask 'coconutbattery'		# Battery capacity checker
 cask 'cyberduck'		# FTP/SFTP/SCP/Webdav/S3/Dropbox/GoogleDrive upload&download
 cask 'dropbox'			# Dropbox "cloud drive"
@@ -67,34 +69,56 @@ cask 'gimp'			# Thö free photoshop clone
 cask 'google-chrome'		# Chrome
 cask 'google-drive'		# Google Drive
 cask 'horndis'			# USB tethering driver
+#cask 'hyperdock'		# show running windows from dock icon, window snapping and management
+#cask 'inkscape'			# Vector graphic drawing
+#cask 'istumpler'		# WLAN discovery tool
 cask 'iterm2'			# Better terminal
 cask 'karabiner'		# Modify key mappings
 cask 'keka'			# For compresing to 7z,zip,tar with file size splitting
 cask 'kindle'			# Amazon ebook reader
+cask 'kismac'			# WLAN stumbling and security tool
 cask 'lastpass'			# Password storage program
+#cask 'libreoffice'		# LibreOpenOffice
 cask 'macpass'			# KeePass compatible password manager (keepassx and keepassxc suck)
+#cask 'musicbrainz-picard'	# Music file tagger
+#cask 'openscad'			# Programmatic 3D CAD modeller
+cask 'opera'			# Opera browser
+#cask 'picasa'			# Google's now discontinued photo catalogue software
 cask 'pilemd'			# Markdown based note taking app - a bit work in progress
+#cask 'qbittorent'		# QT based bittorrent client
 cask 'qr-journal'		# Create and read QR codes
 cask 'reggy'			# Regular Expression tester/viewer
 cask 'resilio-sync'		# Olde BitTorrent Sync renamed
 cask 'skim'			# PDF reader and annotator
+#cask 'sketchup'			# 3D modelling mouse first, more like spaces, not so 3D printing
 cask 'skype'			# Skype 
 cask 'slack'			# Slack
+#cask 'slic3r'			# 3D printer slice preparation
 cask 'spotify'			# Spotify
 cask 'teamviewer'		# Remote desktop
 cask 'the-unarchiver'		# Simple unachiver for zips etc.
 cask 'thunderbird'		# POP3/IMAP mail client
+#cask 'transmission'		# Simple bittorent client
 cask 'tunnelblick'		# OpenVPN tunnelling
 cask 'virtualbox'		# Virtual machines
 cask 'virtualbox-extension-pack'# .. and extensions: support for usb2&3, rdp, network boot
 cask 'vlc'			# VideoLan Player
+#cask 'vox'			# Music player
 cask 'whatsapp'			# WhatApp desktop app
+#cask 'xee'			# Image viewer and browser
 
 ### Mac App Store apps with mas
 brew 'mas'					# https://github.com/mas-cli/mas
+#mas 'Keynote', id: 409183694			# Apples Keynote ~ "powerpoint"
 mas 'Microsoft Remote Desktop', id: 715768417	# Remote desktopping to windows machines
 mas 'Noizio', id: 928871589			# Noise generator - wind, rain, whales..
+#mas 'Numbers', id: 409203825			# Apples Numbers ~ "excel"
+#mas 'Pages', id: 409201541			# Apples Pages ~ "word"
 mas 'Pushbullet', id: 948415170			# Send and receive push messages over Pushbullet
 mas 'SysInfo', id: 892050289			# Toolbar meters for network, memory and cpu
 mas 'Tomato One', id: 907364780			# Pomodoro clock
 mas 'Xcode', id: 497799835			# Xcode
+
+# Custom builds
+# ffmpeg with all possible compression libraries, takes ~15min to compile on late 2008 macbook
+#brew 'ffmpeg', args: ['with-fdk-aac', 'with-freetype', 'with-libass', 'with-libvorbis', 'with-libvpx', 'with-opus', 'with-sdl2', 'with-x265']
